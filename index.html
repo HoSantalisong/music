@@ -59,7 +59,7 @@
   <audio id="player" controls autoplay></audio>
 
   <script>
-    // Playlist data (yaha apne songs + covers + singer ka naam likho)
+  
     const songs = [
       {
         title: "Aama Tangi Re",
@@ -84,7 +84,7 @@
     const playlistDiv = document.getElementById("playlist");
     const player = document.getElementById("player");
 
-    // Playlist generate karna
+   
     songs.forEach((song, index) => {
       let div = document.createElement("div");
       div.classList.add("song");
@@ -98,7 +98,7 @@
       playlistDiv.appendChild(div);
     });
 
-    // Function: Song play karna
+    
     function playSong(index) {
       player.src = songs[index].file;
       player.play();
