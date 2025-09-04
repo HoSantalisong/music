@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Music Playlist</title>
+  <title>My Music Site</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,94 +16,84 @@
       margin-bottom: 20px;
     }
     .song {
-      margin: 15px auto;
+      margin: 20px auto;
       padding: 15px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       max-width: 400px;
     }
-    img {
+    .song img {
+      width: 100%;
       border-radius: 10px;
       margin-bottom: 10px;
     }
-    button, a {
-      margin: 8px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
+    .song h2 {
+      margin: 10px 0 5px;
     }
-    button {
-      background: #4CAF50;
-      color: white;
-    }
-    a {
-      background: #2196F3;
-      color: white;
-      text-decoration: none;
+    .song p {
+      margin: 5px 0;
+      color: #555;
     }
     audio {
-      width: 90%;
-      margin-top: 20px;
+      width: 100%;
+      margin: 10px 0;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      background: #0073e6;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    a:hover {
+      background: #005bb5;
     }
   </style>
 </head>
 <body>
 
-  <h1>🎶 My Playlist 🎶</h1>
+  <h1>🎶 My Music Site 🎶</h1>
 
-  <div id="playlist"></div>
+  <!-- Song 1 -->
+  <div class="song">
+    <img src="Aama_Tangi_Re.jpg" alt="Aama Tangi Re Cover">
+    <h2>Aama Tangi Re</h2>
+    <p>Singer: Shivendra Murmu</p>
+    <audio controls>
+      <source src="Aama_Tangi_Re.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+    <a href="Aama_Tangi_Re.mp3" download>⬇ Download</a>
+  </div>
 
-  <audio id="player" controls autoplay></audio>
+  <!-- Song 2 -->
+  <div class="song">
+    <img src="Nepel_Hobalena.jpg" alt="Nepel Hobalena Cover">
+    <h2>Nepel Hobalena</h2>
+    <p>Singer: Santali Artist</p>
+    <audio controls>
+      <source src="Nepel_Hobalena.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+    <a href="Nepel_Hobalena.mp3" download>⬇ Download</a>
+  </div>
 
-  <script>
-  
-    const songs = [
-      {
-        title: "Aama Tangi Re",
-        file: "Aama_Tangi_Re.mp3",
-        cover: "Aama_Tangi_Re.jpg",
-        singer: "Santali Singer 1"
-      },
-      {
-        title: "Nepel Hobalena",
-        file: "Nepel_Hobalena.mp3",
-        cover: "Nepel_Hobalena.jpg",
-        singer: "Santali Singer 2"
-      },
-      {
-        title: "Jhupur Jhuli",
-        file: "Jhupur_Jhuli.mp3",
-        cover: "Jhupur_Jhuli.jpg",
-        singer: "Santali Singer 3"
-      }
-    ];
-
-    const playlistDiv = document.getElementById("playlist");
-    const player = document.getElementById("player");
-
-   
-    songs.forEach((song, index) => {
-      let div = document.createElement("div");
-      div.classList.add("song");
-      div.innerHTML = `
-        <h3>${song.title}</h3>
-        <img src="${song.cover}" alt="${song.title} Cover" width="200"><br>
-        <p><b>Singer:</b> ${song.singer}</p>
-        <button onclick="playSong(${index})">▶ Play</button>
-        <a href="${song.file}" download>⬇ Download</a>
-      `;
-      playlistDiv.appendChild(div);
-    });
-
-    
-    function playSong(index) {
-      player.src = songs[index].file;
-      player.play();
-    }
-  </script>
+  <!-- Song 3 -->
+  <div class="song">
+    <img src="Jhupur_Jhuli.jpg" alt="Jhupur Jhuli Cover">
+    <h2>Jhupur Jhuli</h2>
+    <p>Singer: Santali Artist</p>
+    <audio controls>
+      <source src="Jhupur_Jhuli.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+    <a href="Jhupur_Jhuli.mp3" download>⬇ Download</a>
+  </div>
 
 </body>
 </html>
