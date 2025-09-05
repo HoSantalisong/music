@@ -3,97 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Music Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 20px;
-    }
-    .song {
-      margin: 20px auto;
-      padding: 15px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      max-width: 400px;
-    }
-    .song img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .song h2 {
-      margin: 10px 0 5px;
-    }
-    .song p {
-      margin: 5px 0;
-      color: #555;
-    }
-    audio {
-      width: 100%;
-      margin: 10px 0;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-      background: #0073e6;
-      padding: 8px 12px;
-      border-radius: 6px;
-      display: inline-block;
-    }
-    a:hover {
-      background: #005bb5;
-    }
-  </style>
+  <title>HoSantaliBeats</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="sticky">
+    <div class="wrap topbar">
+      <div class="brand">
+        <h1>HoSantaliBeats</h1>
+      </div>
+      <label class="search">
+        <input id="q" type="search" placeholder="Search songs..." />
+      </label>
+    </div>
+  </header>
 
-  <h1>🎶 My Music Site 🎶</h1>
+  <main class="wrap">
+    <section id="grid" class="list"></section>
+  </main>
 
-  <!-- Song 1 -->
-  <div class="song">
-    <img src="Aama_Tangi_Re.jpg" alt="Aama Tangi Re Cover">
-    <h2>Aama Tangi Re</h2>
-    <p>Singer: Shivendra Murmu</p>
-    <audio controls>
-      <source src="Aama_Tangi_Re.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <br>
-    <a href="Aama_Tangi_Re.mp3" download>⬇ Download</a>
-  </div>
+  <footer>
+    <p>© <span id="year"></span> HoSantaliBeats</p>
+  </footer>
 
-  <!-- Song 2 -->
-  <div class="song">
-    <img src="Nepel_Hobalena.jpg" alt="Nepel Hobalena Cover">
-    <h2>Nepel Hobalena</h2>
-    <p>Singer: Santali Artist</p>
-    <audio controls>
-      <source src="Nepel_Hobalena.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <br>
-    <a href="Nepel_Hobalena.mp3" download>⬇ Download</a>
-  </div>
-
-  <!-- Song 3 -->
-  <div class="song">
-    <img src="Jhupur_Jhuli.jpg" alt="Jhupur Jhuli Cover">
-    <h2>Jhupur Jhuli</h2>
-    <p>Singer: Santali Artist</p>
-    <audio controls>
-      <source src="Jhupur_Jhuli.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <br>
-    <a href="Jhupur_Jhuli.mp3" download>⬇ Download</a>
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
