@@ -3,17 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Music Site</title>
+  <title>HoSantaliMusic</title>
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
       background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    #logo{
+      width: 300px;
+      padding: 10px;
+    }
+    small{
+      color: red;
+    }
+    .nav{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .ch{
+      border: 1px solid black;
+      background-color: aqua;
+      padding: 8px 15px;
+      border-radius: 6px;
+    }
+    .searchbar{
+      background-color: grey;
+      height: 50px;
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+    .srch{
+      height: 32px;
+      width: 250px;
+      border: 1px solid black;
+      border-radius: 6px;
+      padding-left: 20px;
+    }
+    .search{
+      height: 35px;
+      width: 80px;
+      border-radius: 6px;
+      background-color:#bd4529;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
+    h1 {
+      margin-top: 15px;
+      font-size: 28px;
+    }
+    h3 {
+      color: white;
+      padding: 8px;
+      border-radius: 6px;
+      margin-top: 40px;
     }
     .song {
       margin: 30px auto;
       padding: 20px;
-      max-width: 300px;
+      max-width: 320px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -39,74 +92,121 @@
     .song a:hover {
       background: #005bb5;
     }
+    footer{
+      margin-top: 40px;
+    }
+    .copyright{
+      background-color:rgba(13,13,13,0.9);
+      height: 60px;
+      text-align: center;
+      padding-top: 10px;
+      color: white;
+    }
   </style>
 </head>
 <body>
 
-  <h1>🎵 My Music Site 🎵</h1>
+  <!-- Logo -->
+  <center>
+    <img src="inko.jpg" alt="logo" id="logo">
+  </center>
+  <center>
+    <small>Adivasi & Santali music Available (New)</small>
+  </center> 
 
-  <!-- Song 1 -->
+  <!-- Navigation -->
+  <div class="nav">
+    <div class="ch">Adivasi Songs</div>
+    <div class="ch">Santali Songs</div>
+    <div class="ch">A to Z Songs</div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="searchbar">
+    <center>
+      <input type="text" placeholder="Search Here...." class="srch">
+      <button class="search">Search</button>
+    </center>
+  </div>
+
+  <h1>🎵 Latest Release 🎵</h1>
+
+  <!-- Song List -->
   <div class="song">
     <h2>Aama Tangi Re</h2>
     <img src="Aama_Tangi_Re.jpg" alt="Aama Tangi Re Cover" width="200"><br>
     <audio controls>
       <source src="Aama_Tangi_Re.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
     </audio>
     <br>
     <a href="Aama_Tangi_Re.mp3" download>⬇ Download Song</a>
   </div>
 
-  <!-- Song 2 -->
   <div class="song">
     <h2>Nepel Hobalena</h2>
-    <img src="NewSong.jpg" alt="New Song Cover" width="200"><br>
+    <img src="NewSong.jpg" alt="Nepel Hobalena Cover" width="200"><br>
     <audio controls>
       <source src="Nepel_Hobalena.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
     </audio>
     <br>
     <a href="Nepel_Hobalena.mp3" download>⬇ Download Song</a>
   </div>
 
-  <!-- Song 3 -->
   <div class="song">
     <h2>Jhupur Jhuli</h2>
     <img src="NewSong.jpg" alt="Jhupur Jhuli Cover" width="200"><br>
     <audio controls>
       <source src="Jhupur_Jhuli.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
     </audio>
     <br>
     <a href="Jhupur_Jhuli.mp3" download>⬇ Download Song</a>
   </div>
-<!-- Song 4 -->
+
   <div class="song">
     <h2>Muluch Landa</h2>
     <img src="NewSong.jpg" alt="Muluch Landa Cover" width="200"><br>
     <audio controls>
       <source src="Muluch_Landa.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
     </audio>
     <br>
     <a href="Muluch_Landa.mp3" download>⬇ Download Song</a>
   </div>
-<!-- Song 5 -->
+
   <div class="song">
     <h2>Mayang Mayang</h2>
-    <img src="NewSong.jpg" alt="New Song Cover" width="200"><br>
+    <img src="NewSong.jpg" alt="Mayang Mayang Cover" width="200"><br>
     <audio controls>
       <source src="Mayang_Mayang.mp3" type="audio/mpeg">
-      <!-- Song 6 -->
+    </audio>
+    <br>
+    <a href="Mayang_Mayang.mp3" download>⬇ Download Song</a>
+  </div>
+
   <div class="song">
-    <h2>Mayang Mayang</h2>
-    <img src="NewSong.jpg" alt="New Song Cover" width="200"><br>
+    <h2>Time Lagega</h2>
+    <img src="NewSong.jpg" alt="Time Lagega Cover" width="200"><br>
     <audio controls>
       <source src="Time_Lagega.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
     </audio>
     <br>
     <a href="Time_Lagega.mp3" download>⬇ Download Song</a>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="copyright">© 2025 - HoSantaliWorld.com<br>
+    Ho and Santali Music</p>
+    <p>
+      <a href="#">DMCA</a> • 
+      <a href="#">Privacy Policy</a> • 
+      <a href="#">About Us</a> • 
+      <a href="#">Terms of Service</a>
+    </p>
+    <p>
+      <a href="https://youtube.com/@sunnysamad-topic" target="_main">YouTube</a> |
+      <a href="https://www.instagram.com/sunny_samad_" target="_blank">Instagram</a>
+    </p>
+  </footer>
+
 </body>
 </html>
